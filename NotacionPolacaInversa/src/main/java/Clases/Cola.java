@@ -56,4 +56,12 @@ public class Cola<T> {
     return primero == null;
     }
     
+    public T primerElemento(){
+        if(primero != null){
+            return (T) primero.getDato();
+        }else{
+            return null;
+        }
+    }
+    
 }
