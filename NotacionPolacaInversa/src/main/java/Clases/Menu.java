@@ -5,6 +5,9 @@
  */
 package Clases;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Vulkmir
@@ -29,11 +32,21 @@ public class Menu {
                 case 1:
                     
                     String formula = gestor.solicitarString("Digite acá su operacion", "");
-                    nuevo.agregarNotacion(formula);
+                {
+                    try {
+                        nuevo.agregarNotacion(formula);
+                        nuevo.dirigirElemento();
+                    } catch (Exception ex) {
+                        System.out.println(ex);
+                    }
+                }
+
                     
                 case 2:
                     System.exit(0);
                     break;
+                    
+                
             }
 
         } while (opcion > 1 || opcion < 9);

@@ -51,6 +51,9 @@ public class Cola<T> {
         return cont;                
     }
     
+    public boolean isEmpty(){
     
+    return primero == null;
+    }
     
 }
