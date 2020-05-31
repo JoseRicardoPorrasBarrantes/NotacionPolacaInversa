@@ -34,12 +34,19 @@ public class PolacaInversa<T> {
        
    if(Character.isDigit( elemento) == false && Character.isAlphabetic(elemento) == false){
    
+       if(elemento == ')' || elemento == ']' || elemento == '}'){
+       
+       
+       }
+       
        pila.push(elemento);
-       System.out.println("Agregando a la pila " + elemento);
+    
+       
+//  System.out.println("Agregando a la pila " + elemento);
    }else{
    
        colaPostFija.encolar(elemento);
-       System.out.println("Agregando a la cola : " + elemento);
+     //  System.out.println("Agregando a la cola : " + elemento);
    }
 
    }    
@@ -48,8 +55,11 @@ public class PolacaInversa<T> {
    
    } 
     
+  public void revisionCierre(char t){}  
     
-    
+   
+   
+   
     
     
 }
