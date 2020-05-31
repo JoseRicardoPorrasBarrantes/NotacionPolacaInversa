@@ -31,7 +31,7 @@ public class Pila {
     if(cima == null)
         throw new MisExcepxiones("La lista se encuentra vacia");
      
-    return cima.getDato();
+    return (char) cima.getDato();
     
     }
     
@@ -41,7 +41,7 @@ public class Pila {
     if(cima == null){
         throw new MisExcepxiones("La lista se encuentra vacia");
     }else{
-    dato = cima.getDato();  
+    dato = (char)cima.getDato();  
    cima = cima.getSiguiente(); 
     }
    return dato;
@@ -80,7 +80,7 @@ public class Pila {
     }else{
     Nodo actual = cima ;
     while(actual != null){
-    if(actual.getDato() == datoRef){
+    if((char)actual.getDato() == datoRef){
         return cont;
     }
     cont++;
