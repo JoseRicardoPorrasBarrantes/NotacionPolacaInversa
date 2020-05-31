@@ -68,5 +68,37 @@ public class PolacaInversa<T> {
         }
 
     }
+    
+   public void revisionPrioridad(char t) throws Exception{
+if(pila.empty()){
+pila.push(t);
+return;
+}
+
+if(t == '^' || t == 'S' || t == 's' || t == 'c' || t == 't' || t == 'f'){
+
+if(pila.pop() == '^' || pila.pop() == 'S' || pila.pop() == 's' || pila.pop() == 'c' || pila.pop() == 't' || pila.pop() == 'f')
+colaPostFija.encolar(pila.pop());
+pila.push(t);
+
+}
+if(t == '*' || t == '/'){
+if(pila.pop() == '*' || pila.pop() == '/' || pila.pop() == '+' || pila.pop()=='-' ||pila.pop() == '{' || pila.pop() == '(' || pila.pop() == '['){
+colaPostFija.encolar(pila.pop());
+pila.push(t);
+}
+}
+
+if(t == '+' || t == '-'||pila.pop() == '{' || pila.pop() == '(' || pila.pop() == '['){
+if(pila.pop() == '+' || pila.pop()=='-' ||pila.pop() == '{' || pila.pop() == '(' || pila.pop() == '['){
+colaPostFija.encolar(pila.pop());
+pila.push(t);
+}
+}
+
+
+} 
+    
+    
 
 }
